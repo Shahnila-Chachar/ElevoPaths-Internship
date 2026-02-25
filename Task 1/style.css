@@ -17,16 +17,16 @@ body{
     padding:10px 15px;
     cursor:pointer;
     border:none;
-    background:#333;
-    color:white;
+    background: white;
+    color:#333;
     border-radius:5px;
 }
 
 .sidebar{
     width:250px;
     height:100vh;
-    background:#222;
-    color:white;
+    background:#f0f0f0;
+    color:#222;
     padding:20px;
     transition:all 0.3s ease;
 }
@@ -39,6 +39,10 @@ body{
     font-size:24px;
     text-align:center;
     margin-bottom:30px;
+}
+.logo img{
+    width:20%;
+    height:auto;
 }
 
 .menu{
@@ -54,7 +58,7 @@ body{
 }
 
 .menu li:hover{
-    background:#444;
+    background:#ddd;
 }
 
 .sidebar.closed span{
