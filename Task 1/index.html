@@ -1,62 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collapsible Sidebar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collapsible Sidebar</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
 
-    <button id="toggleBtn">
-        <i id="toggleIcon" class="fa-solid fa-bars"></i>
-    </button>
+<button id="toggleBtn">
+    <i id="toggleIcon" class="fa-solid fa-bars"></i>
+</button>
 
-    <div class="sidebar closed" id="sidebar">
+<div class="sidebar" id="sidebar">
 
-        <div class="logo">
-            <img src="Images/logo.png" alt="logo">
+    <div class="logo">
+
+        <div class="logo-left">
+            <img src="Images/logo.png" alt="">
             <span class="company-name">MyCompany</span>
         </div>
 
-        <ul class="menu">
-
-            <li>
-                <i class="fa-solid fa-house"></i>
-                <span>Home</span>
-            </li>
-
-            <li>
-                <i class="fa-solid fa-user"></i>
-                <span>Profile</span>
-            </li>
-
-            <li>
-                <i class="fa-solid fa-envelope"></i>
-                <span>Messages</span>
-            </li>
-
-            <li>
-                <i class="fa-solid fa-gear"></i>
-                <span>Settings</span>
-            </li>
-
-            <li>
-                <i class="fa-solid fa-right-from-bracket"></i>
-                <span>Logout</span>
-            </li>
-
-        </ul>
+        <i class="fa-solid fa-xmark closeSidebar"></i>
 
     </div>
 
-    <script src="script.js"></script>
+    <ul class="menu">
+        <li><i class="fa-solid fa-house"></i> <span>Home</span></li>
+        <li><i class="fa-solid fa-user"></i> <span>Profile</span></li>
+        <li><i class="fa-solid fa-envelope"></i> <span>Messages</span></li>
+        <li><i class="fa-solid fa-gear"></i> <span>Settings</span></li>
+        <li><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></li>
+    </ul>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

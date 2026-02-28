@@ -1,6 +1,7 @@
 let sidebar = document.getElementById("sidebar");
 let toggleBtn = document.getElementById("toggleBtn");
 let icon = document.getElementById("toggleIcon");
+let closeBtn = document.querySelector(".closeSidebar");
 
 toggleBtn.onclick = function () {
 
@@ -11,13 +12,12 @@ toggleBtn.onclick = function () {
         sidebar.classList.toggle("closed");
     }
 
-    if (icon.classList.contains("fa-bars")) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
-    } 
-    else {
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-    }
+}
 
-};
+/* CLOSE WITH CROSS */
+
+closeBtn.onclick = function(){
+
+    sidebar.classList.add("closed");
+
+}
