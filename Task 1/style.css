@@ -1,99 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    list-style: none;
 }
 
-body{
-    display:flex;
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
-/* Hamburger button */
-#toggleBtn{
-    position:fixed;
-    top:15px;
-    left:15px;
-    font-size:22px;
-    padding:10px 15px;
-    border:none;
-    background:white;
-    cursor:pointer;
-    border-radius:5px;
-    z-index:1000;
+body {
+    background-color: azure;
+    color: white;
 }
 
-/* Sidebar */
-.sidebar{
-    width:250px;
-    height:100vh;
-    background:#f0f0f0;
-    color:#222;
-    padding:20px;
-    transition:all 0.3s ease;
+html::-webkit-scrollbar {
+    width: 0.8rem;
 }
 
-/* Sidebar closed for desktop */
-.sidebar.closed{
-    width:70px;
+html::-webkit-scrollbar-track {
+    background-color: #363637;
 }
 
-/* Sidebar header */
-.sidebar-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:30px;
+html::-webkit-scrollbar-thumb {
+    background-color: azure;
 }
 
-/* Company name */
-.sidebar-header .company-name{
-    font-size:18px;
-    font-weight:bold;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 4%;
+    background: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-/* Logo */
-.sidebar-header .logo img{
-    width:35px;
-    height:auto;
+.mylogo {
+    display: flex;
+    align-items: center;
 }
 
-/* Hide company name + logo when sidebar closed */
-.sidebar.closed .company-name,
-.sidebar.closed .logo img{
-    display:none;
+.logo-image {
+    width: 70px;
+    border-radius: 50%;
+    transition: width 0.3s ease;
 }
 
-/* Menu */
-.menu{
-    list-style:none;
+.logo {
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    padding-left: 1.5%;
+    white-space: nowrap;
 }
 
-.menu li{
-    padding:12px 10px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    cursor:pointer;
+.logo:hover {
+    transform: scale(1.1);
 }
 
-.menu li:hover{
-    background:#ddd;
+#menu-icon {
+    font-size: 2rem;
+    font-weight: 800;
+    cursor: pointer;
 }
 
-/* Hide menu text when closed */
-.sidebar.closed .menu li span{
-    display:none;
+.menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid #1b2744;
+    border-bottom: 3px solid #1b2744;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem 3%;
+    background-color: #1b2744;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: none;
 }
 
-/* Mobile */
-@media (max-width:768px){
-    .sidebar{
-        position:fixed;
-        left:-250px;
-        transition:0.3s;
+.menu.active {
+    display: block;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.menu li i {
+    margin-right: 1rem;
+}
+
+.menu li:hover {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.5rem solid #1b2744;
+}
+
+#menu-icon.fa-xmark::before {
+    content: "\f00d"; /* FontAwesome X icon */
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 2.4rem;
     }
-    .sidebar.open{
-        left:0;
+
+    .logo-image {
+        width: 55px;
     }
+
+    .menu {
+        width: 70%;
+    }
+
+    .menu li {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .logo-image {
+        width: 45px;
+    }
+
+    .menu {
+        width: 90%;
+    }
+
+    .menu li {
+        font-size: 1.6rem;
+        margin: 1.5rem 0;
+    }
+}
+
+/* FontAwesome toggle */
+#menu-icon.fa-xmark::before {
+    content: "\f00d"; /* X icon */
 }

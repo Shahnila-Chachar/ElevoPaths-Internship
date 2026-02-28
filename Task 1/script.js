@@ -1,12 +1,8 @@
-let sidebar = document.getElementById("sidebar");
-let toggleBtn = document.getElementById("toggleBtn");
+const menuIcon = document.getElementById('menu-icon');
+const menu = document.querySelector('.menu');
 
-toggleBtn.onclick = function(){
-    if(window.innerWidth <= 768){
-        // Mobile: slide in/out
-        sidebar.classList.toggle("open");
-    } else {
-        // Desktop: collapse/expand
-        sidebar.classList.toggle("closed");
-    }
-}
+menuIcon.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    menuIcon.classList.toggle('fa-bars'); 
+    menuIcon.classList.toggle('fa-xmark'); 
+});
