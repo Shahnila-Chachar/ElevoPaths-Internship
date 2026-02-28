@@ -1,6 +1,5 @@
 let sidebar = document.getElementById("sidebar");
 let toggleBtn = document.getElementById("toggleBtn");
-let icon = document.getElementById("toggleIcon");
 let closeBtn = document.querySelector(".closeSidebar");
 
 toggleBtn.onclick = function () {
@@ -12,6 +11,7 @@ toggleBtn.onclick = function () {
         sidebar.classList.toggle("closed");
     }
 
+    toggleBtn.style.display = "none";   // hide hamburger
 }
 
 /* CLOSE WITH CROSS */
@@ -19,5 +19,6 @@ toggleBtn.onclick = function () {
 closeBtn.onclick = function(){
 
     sidebar.classList.add("closed");
+    toggleBtn.style.display = "block";  // show hamburger again
 
 }

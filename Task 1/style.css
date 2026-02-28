@@ -20,6 +20,7 @@ body{
     background:white;
     color:#333;
     border-radius:5px;
+     z-index:1000;
 }
 
 .sidebar{
@@ -35,7 +36,9 @@ body{
     width:70px;
 }
 
-/* LOGO SECTION */
+.sidebar:not(.closed) ~ #toggleBtn{
+    display:none;
+}
 
 .logo{
     display:flex;
@@ -82,7 +85,6 @@ body{
     background:#ddd;
 }
 
-/* HIDE TEXT WHEN CLOSED */
 
 .sidebar.closed span{
     display:none;
@@ -96,7 +98,9 @@ body{
     display:none;
 }
 
-/* MOBILE */
+.sidebar.closed .logo img{
+    display:none;
+}
 
 @media (max-width:768px){
 
