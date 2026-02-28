@@ -4,30 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Collapsible Sidebar</title>
-
 <link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
-
 <body>
 
+<!-- Hamburger Button -->
 <button id="toggleBtn">
-    <i id="toggleIcon" class="fa-solid fa-bars"></i>
+    <i class="fa-solid fa-bars"></i>
 </button>
 
-<div class="sidebar" id="sidebar">
+<div class="sidebar closed" id="sidebar">
 
-    <div class="logo">
-
-        <div class="logo-left">
-            <img src="Images/logo.png" alt="">
-            <span class="company-name">MyCompany</span>
+    <div class="sidebar-header">
+        <span class="company-name">MyCompany</span>
+        <div class="logo">
+            <img src="Images/logo.png" alt="Logo">
         </div>
-
-        <i class="fa-solid fa-xmark closeSidebar"></i>
-
     </div>
 
     <ul class="menu">
@@ -41,6 +34,5 @@
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

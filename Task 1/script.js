@@ -1,24 +1,12 @@
 let sidebar = document.getElementById("sidebar");
 let toggleBtn = document.getElementById("toggleBtn");
-let closeBtn = document.querySelector(".closeSidebar");
 
-toggleBtn.onclick = function () {
-
-    if (window.innerWidth <= 768) {
+toggleBtn.onclick = function(){
+    if(window.innerWidth <= 768){
+        // Mobile: slide in/out
         sidebar.classList.toggle("open");
-    } 
-    else {
+    } else {
+        // Desktop: collapse/expand
         sidebar.classList.toggle("closed");
     }
-
-    toggleBtn.style.display = "none";   // hide hamburger
-}
-
-/* CLOSE WITH CROSS */
-
-closeBtn.onclick = function(){
-
-    sidebar.classList.add("closed");
-    toggleBtn.style.display = "block";  // show hamburger again
-
 }
